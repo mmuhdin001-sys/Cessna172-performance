@@ -1,4 +1,3 @@
-
 package com.muhdin.takeoffefb;
 
 import android.app.Activity;
@@ -13,7 +12,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         WebView webView = new WebView(this);
+
         webView.setWebViewClient(new WebViewClient());
+
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        webView.loadUrl("file:///android_asset/index.html");
 
         setContentView(webView);
     }
